@@ -1,0 +1,21 @@
+# 在这里编写springboot的配置信息
+#测试时，本地不能启用虚拟网络，docker、wifi等
+spring:
+   datasource:
+        first:
+          url: jdbc:mysql://127.0.0.1:3306/paysystem?useUnicode=true&characterEncoding=UTF-8
+          username: root
+          password: 3501987
+          # 使用druid数据源
+          type: com.alibaba.druid.pool.DruidDataSource
+          driver-class-name: com.mysql.jdbc.Driver
+        second:
+          url: jdbc:sqlserver://60.2.176.70:9878;DatabaseName=YdSmartCommunity
+          username: ydcommunity
+          password: yd2017@#
+          #使用druid数据源
+          type: com.alibaba.druid.pool.DruidDataSource
+          driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+logging:
+  level:
+     com.boot.mapper : debug

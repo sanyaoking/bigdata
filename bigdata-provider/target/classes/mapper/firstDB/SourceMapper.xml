@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.boot.mapper.firstDB.FirstMapper">
+    <select id="selectBySourcecode" resultType="com.boot.entity.Test1" parameterType="java.util.Map">
+        select * from test1 where source_code=${source_code} and is_show=1 and is_check=1 order BY add_time DESC limit 1
+    </select>
+</mapper>
